@@ -1,0 +1,10 @@
+com\example\feeder\entities\Comment.class
+com\example\feeder\service\CommentService.class
+com\example\feeder\Repository\PostRepository.class
+com\example\feeder\Component\DatabaseLoader.class
+com\example\feeder\Repository\CommentRepository.class
+com\example\feeder\service\PostService.class
+com\example\feeder\FeederApplication.class
+com\example\feeder\entities\Post.class
+com\example\feeder\entities\User.class
+com\example\feeder\ResourceController\PostController.class
