@@ -1,6 +1,6 @@
 package com.example.feeder.resourceController;
 
-import com.example.feeder.entity.Comment;
+import com.example.feeder.model.dto.CommentDTO;
 import com.example.feeder.service.CommentService;
 import com.example.feeder.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,14 +25,14 @@ public class CommentController {
     }
 
     @GetMapping
-    public ResponseEntity<?> getPostComments(@PathVariable("postId") long postId) {
-        List<Comment> comments = postService.getAllComments(postId);
+    public ResponseEntity<List<CommentDTO>> getPostComments(@PathVariable("postId") long postId) {
+        List<CommentDTO> comments = postService.getAllComments(postId);
         return new ResponseEntity<>(comments, HttpStatus.OK);
     }
 
     @PostMapping
-    public ResponseEntity<Comment> createComment(@PathVariable("postId") long postId, @RequestBody Comment newComment) {
-        Comment responseComment = commentService.addComment(postId, newComment);
+    public ResponseEntity<CommentDTO> createComment(@PathVariable("postId") long postId, @RequestBody CommentDTO newComment) {
+        CommentDTO responseComment = commentService.addComment(postId, newComment);
         return new ResponseEntity<>(responseComment, HttpStatus.CREATED);
     }
 
