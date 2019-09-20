@@ -29,7 +29,6 @@ public class DatabaseLoader implements CommandLineRunner {
         for (int i = 1; i <= 5; i++) {
             Comment comment = new Comment(i + ". " + "Lorem ipsum dolor sit amet, fusce ipsum integer.");
             comment.setPost(post);
-            post.getComments().add(comment);
         }
 
         this.postRepository.save(post);

@@ -1,10 +1,10 @@
 package com.example.feeder.entity;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 
-import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 public class Post {
@@ -14,12 +14,6 @@ public class Post {
     private Long id;
 
     private String content;
-
-    @OneToMany(mappedBy = "post",
-            cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY)
-    @JsonManagedReference
-    private List<Comment> comments = new ArrayList<>();
 
     public Post() {
     }
@@ -44,22 +38,4 @@ public class Post {
         this.content = content;
     }
 
-    public List<Comment> getComments() {
-        return comments;
-    }
-
-    public void setComments(List<Comment> comments) {
-        this.comments = comments;
-    }
-
-    //    @Override
-//    public String toString() {
-//        String com = "";
-//        for (Comment c : comments)
-//            com += c.getContent() + "\n";
-//        return "Post {\n" +
-//                "id = " + id + "\n" +
-//                "content = " + content + "\n" +
-//                "comments { \n" + com;
-//    }
 }

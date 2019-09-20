@@ -2,7 +2,6 @@ package com.example.feeder.resourceController;
 
 import com.example.feeder.model.dto.CommentDTO;
 import com.example.feeder.service.CommentService;
-import com.example.feeder.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,18 +14,17 @@ import java.util.List;
 @RequestMapping("/api/posts/{postId}/comments")
 public class CommentController {
 
-    private final PostService postService;
     private final CommentService commentService;
 
     @Autowired
-    public CommentController(final PostService postService, final CommentService commentService) {
-        this.postService = postService;
+    public CommentController(final CommentService commentService) {
         this.commentService = commentService;
     }
 
     @GetMapping
     public ResponseEntity<List<CommentDTO>> getPostComments(@PathVariable("postId") long postId) {
-        List<CommentDTO> comments = postService.getAllComments(postId);
+//        List<CommentDTO> comments = postService.getAllComments(postId);
+        List<CommentDTO> comments = commentService.findByPostId(postId);
         return new ResponseEntity<>(comments, HttpStatus.OK);
     }
 

@@ -1,6 +1,5 @@
 package com.example.feeder.entity;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
 
@@ -13,9 +12,8 @@ public class Comment {
 
     private String content;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "post_fk", nullable = false)
-    @JsonBackReference
     private Post post;
 
     public Comment() {

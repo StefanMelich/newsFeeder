@@ -1,9 +1,7 @@
 package com.example.feeder.resourceController;
 
-import com.example.feeder.entity.Post;
 import com.example.feeder.model.dto.PostDTO;
 import com.example.feeder.service.PostService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,7 +16,6 @@ public class PostController {
 
     private final PostService postService;
 
-    @Autowired
     public PostController(final PostService postService) {
         this.postService = postService;
     }
