@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/server/feeder.iml" filepath="$PROJECT_DIR$/server/feeder.iml" />
-      <module fileurl="file://$PROJECT_DIR$/feeder (1).iml" filepath="$PROJECT_DIR$/feeder (1).iml" />
     </modules>
   </component>
 </project>

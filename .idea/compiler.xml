@@ -23,12 +23,6 @@
         </processorPath>
         <module name="feeder" />
       </profile>
-      <profile name="Annotation profile for feeder-server" enabled="true">
-        <sourceOutputDir name="server/target/generated-sources/annotations" />
-        <sourceTestOutputDir name="server/target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="feeder (1)" />
-      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="feeder" target="1.8" />

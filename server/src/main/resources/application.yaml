@@ -16,6 +16,7 @@ spring:
     password:
     driver-class-name: org.h2.Driver
 
+
   # H2
   h2:
     console:
@@ -27,7 +28,7 @@ spring:
       ddl-auto: create
 
     show-sql: true
-    database-platform: org.hibernate.dialect.MySQL5Dialect
+    database-platform: org.hibernate.dialect.H2Dialect
     properties:
       hibernate:
         id:
