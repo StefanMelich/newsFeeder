@@ -2,65 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8c38c63-aae0-4b12-9a72-6a405c600405" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/application/controller/ErrorHandlingAdvice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/domain/exception/ErrorMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/domain/exception/NotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/domain/useCase/AddPost.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/domain/useCase/DeletePost.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/domain/useCase/FindAllPosts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/domain/useCase/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/domain/useCase/UpdatePost.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/aauth/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/aauth/AuthEntryPointJwt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/aauth/AuthTokenFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/aauth/JwtUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/aauth/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/aauth/RoleConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/aauth/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/aauth/UserDetailsImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/aauth/UserDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/aauth/UserDetailsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/aauth/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/aauth/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/aauth/appService/LoginService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/aauth/appService/RegisterService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/aauth/exception/UserExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/aauth/request/LoginRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/aauth/request/RegisterRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/aauth/response/JwtResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/aauth/response/MessageResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_processor_1_3_0_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/feeder.iml" beforeDir="false" afterPath="$PROJECT_DIR$/server/feeder.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/component/DatabaseLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/infrastructure/component/DatabaseLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/entity/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/domain/entity/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/entity/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/domain/entity/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/mappers/CommentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/application/mappers/CommentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/mappers/PostMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/application/mappers/PostMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/model/dto/CommentDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/application/dto/CommentDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/model/dto/PostDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/application/dto/PostDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/repository/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/domain/repository/CommentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/repository/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/domain/repository/PostRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/resourceController/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/application/controller/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/resourceController/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/application/controller/PostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/application/service/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/application/service/PostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/application/controller/ErrorHandlingAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/feeder/application/controller/ErrorHandlingAdvice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/feeder/FeederApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/example/feeder/FeederApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/feeder/component/DatabaseLoader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/feeder/entity/Comment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/feeder/entity/Post.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/feeder/mappers/CommentMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/feeder/mappers/CommentMapperImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/feeder/mappers/PostMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/feeder/mappers/PostMapperImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/feeder/model/dto/CommentDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/feeder/model/dto/PostDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/feeder/repository/CommentRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/feeder/repository/PostRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/feeder/resourceController/CommentController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/feeder/resourceController/PostController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/feeder/service/CommentService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/feeder/service/PostService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/feeder-0.0.1-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/feeder-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/generated-sources/annotations/com/example/feeder/mappers/CommentMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/generated-sources/annotations/com/example/feeder/application/mappers/CommentMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/generated-sources/annotations/com/example/feeder/mappers/PostMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/generated-sources/annotations/com/example/feeder/application/mappers/PostMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/TEST-com.example.feeder.FeederApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/TEST-com.example.feeder.FeederApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/com.example.feeder.FeederApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/com.example.feeder.FeederApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/feeder/application/controller/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/example/feeder/application/controller/CommentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/feeder/application/controller/ErrorHandlingAdvice.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/example/feeder/application/controller/ErrorHandlingAdvice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/feeder/application/controller/PostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/example/feeder/application/controller/PostController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/feeder/application/dto/CommentDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/example/feeder/application/dto/CommentDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/feeder/application/dto/PostDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/example/feeder/application/dto/PostDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/feeder/application/mappers/CommentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/example/feeder/application/mappers/CommentMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/feeder/application/mappers/CommentMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/example/feeder/application/mappers/CommentMapperImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/feeder/application/mappers/PostMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/example/feeder/application/mappers/PostMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/feeder/application/mappers/PostMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/example/feeder/application/mappers/PostMapperImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/feeder/application/service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/example/feeder/application/service/CommentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/feeder/application/service/PostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/example/feeder/application/service/PostService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/feeder/domain/entity/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/example/feeder/domain/entity/Post.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/feeder/domain/exception/ErrorMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/example/feeder/domain/exception/ErrorMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/feeder/domain/exception/NotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/example/feeder/domain/exception/NotFoundException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/feeder/domain/repository/CommentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/example/feeder/domain/repository/CommentRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/feeder/domain/useCase/AddPost.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/example/feeder/domain/useCase/AddPost.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/feeder/domain/useCase/DeletePost.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/example/feeder/domain/useCase/DeletePost.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/feeder/domain/useCase/FindAllPosts.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/example/feeder/domain/useCase/FindAllPosts.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/feeder/domain/useCase/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/example/feeder/domain/useCase/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/feeder/domain/useCase/UpdatePost.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/example/feeder/domain/useCase/UpdatePost.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/generated-sources/annotations/com/example/feeder/application/mappers/CommentMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/generated-sources/annotations/com/example/feeder/application/mappers/CommentMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/generated-sources/annotations/com/example/feeder/application/mappers/PostMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/generated-sources/annotations/com/example/feeder/application/mappers/PostMapperImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +83,7 @@
         <option value="JavaScript File" />
         <option value="Vue Single File Component" />
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -159,15 +150,16 @@
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\WIN10\IdeaProjects\newsfeeder\server" />
-      <recent name="C:\Users\WIN10\IdeaProjects\newsfeeder" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.feeder.application" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.feeder.aauth" />
       <recent name="com.example.feeder.entities" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\WIN10\IdeaProjects\newsfeeder\server" />
+      <recent name="C:\Users\WIN10\IdeaProjects\newsfeeder" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -290,7 +282,7 @@
       <workItem from="1576872235685" duration="3327000" />
       <workItem from="1576927100999" duration="14118000" />
       <workItem from="1577045707793" duration="19440000" />
-      <workItem from="1577965338839" duration="49000" />
+      <workItem from="1577965338839" duration="23703000" />
     </task>
     <task id="LOCAL-00001" summary="added DTO and mapping">
       <created>1560693447800</created>
@@ -357,10 +349,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Removed hibernate cycling" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="233" y="0" key="#Assign_Data_Sources" timestamp="1577046956996">
+    <state x="233" y="0" key="#Assign_Data_Sources" timestamp="1577966295534">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="0" key="#Assign_Data_Sources/0.0.1280.680@0.0.1280.680" timestamp="1577046956996" />
+    <state x="233" y="0" key="#Assign_Data_Sources/0.0.1280.680@0.0.1280.680" timestamp="1577966295534" />
     <state x="233" y="0" key="#Assign_Naming_Strategies..." timestamp="1577046488064">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -373,10 +365,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="237" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1577046937762" />
-    <state x="446" y="56" key="#com.intellij.ide.util.MemberChooser" timestamp="1577114197366">
+    <state x="446" y="48" key="#com.intellij.ide.util.MemberChooser" timestamp="1578067969071">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="56" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1577114197366" />
+    <state x="446" y="48" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1578067969071" />
     <state x="256" y="266" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1577101720856">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -385,30 +377,54 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="438" y="221" width="474" height="239" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1280.680@0.0.1280.680" timestamp="1577101723705" />
+    <state x="219" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1578067718082">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="219" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.680@0.0.1280.680" timestamp="1578067718082" />
+    <state x="371" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1578053169451">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="371" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1578053169451" />
     <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1577046184787">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1577046184787" />
-    <state width="1237" height="371" key="GridCell.Tab.0.bottom" timestamp="1577117010987">
+    <state width="1237" height="200" key="GridCell.Tab.0.bottom" timestamp="1578094057157">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="371" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1577117010987" />
+    <state width="1237" height="200" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1578094057157" />
     <state width="1877" height="452" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1576612253523" />
-    <state width="1237" height="371" key="GridCell.Tab.0.center" timestamp="1577117010987">
+    <state width="1237" height="200" key="GridCell.Tab.0.center" timestamp="1578094057157">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="371" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1577117010987" />
+    <state width="1237" height="200" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1578094057157" />
     <state width="1877" height="452" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1576612253522" />
-    <state width="1237" height="371" key="GridCell.Tab.0.left" timestamp="1577117010987">
+    <state width="1237" height="200" key="GridCell.Tab.0.left" timestamp="1578094057156">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="371" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1577117010987" />
+    <state width="1237" height="200" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1578094057156" />
     <state width="1877" height="452" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1576612253522" />
-    <state width="1237" height="371" key="GridCell.Tab.0.right" timestamp="1577117010987">
+    <state width="1237" height="200" key="GridCell.Tab.0.right" timestamp="1578094057157">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="371" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1577117010987" />
+    <state width="1237" height="200" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1578094057157" />
     <state width="1877" height="452" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1576612253523" />
+    <state width="1237" height="228" key="GridCell.Tab.1.bottom" timestamp="1578069936466">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="228" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1578069936466" />
+    <state width="1237" height="228" key="GridCell.Tab.1.center" timestamp="1578069936466">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="228" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1578069936466" />
+    <state width="1237" height="228" key="GridCell.Tab.1.left" timestamp="1578069936466">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="228" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1578069936466" />
+    <state width="1237" height="228" key="GridCell.Tab.1.right" timestamp="1578069936466">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="228" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1578069936466" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1577046416425">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

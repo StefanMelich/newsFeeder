@@ -42,3 +42,10 @@ spring:
   data:
     rest:
       base-path: /api
+
+# App Security Properties
+# expiration 1 minute
+feeder:
+  app:
+    jwtSecret: secretKey
+    jwtExpirationMs: 60000
