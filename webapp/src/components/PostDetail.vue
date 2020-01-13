@@ -38,7 +38,7 @@
                 <comment-create-form @add-comment-event="addComment($event)" />
                 <!-- comments list -->
                 <mdb-list-group>
-                    <comment v-for="comment in post.comments"
+                    <comment v-for="comment in this.post.comments"
                              :key="comment.id"
                              :comment="comment"
                              @delete-comment="deleteComment($event)">
@@ -54,14 +54,15 @@
 
     import { mdbContainer, mdbRow, mdbCol, mdbListGroup } from 'mdbvue';
     import { mdbDropdown, /* mdbDropdownToggle,*/ mdbDropdownMenu, mdbDropdownItem } from 'mdbvue';
-    import http from "../http-common";
     import CommentCreateForm from "./CommentCreateForm";
     import Comment from "./Comment";
     import PostUpdate from "./PostUpdate";
+    import postService from "../auth/services/post.service";
+    import commentService from "../auth/services/comment.service";
 
     export default {
         name: "Post",
-        props: ["post"],
+        props: ["paramPost"],
         components: {
             CommentCreateForm, Comment, PostUpdate,
             mdbListGroup, mdbContainer, mdbRow, mdbCol,
@@ -69,8 +70,18 @@
         },
         data() {
             return {
+                post: this.paramPost,
                 update: false
             };
+        },
+        mounted() {
+            /* eslint-disable no-console */
+            commentService
+                .getAllComments(this.post.id)
+                .then(response => {
+                    this.post.comments = response.data;
+                    console.log(response.data);
+                }).catch(e => console.log(e));
         },
         methods: {
             /* eslint-disable no-console */
@@ -82,7 +93,8 @@
                     id: this.post.id,
                     content: newContent,
                 };
-                http.put("/posts/" + this.post.id, data)
+                postService
+                    .updatePost(data)
                     .then(response => {
                         console.log(response.data);
                     })
@@ -97,7 +109,7 @@
                 if (newComment.length != 0)
                 {
                     let data = { content: newComment };
-                    http.post("/posts/" + this.post.id + "/comments", data)
+                    commentService.createComment(this.post.id, data)
                         .then(response => {
                             console.log("response from server after post comment");
                             console.log(response);
@@ -109,7 +121,7 @@
                 }
             },
             deleteComment(commentId) {
-                http.delete("/posts/" + this.post.id + "/comments/" + commentId)
+                commentService.deleteComment(this.post.id, commentId)
                     .then(response => {
                         console.log(response.data);
                         let index = this.post.comments.findIndex(c => c.id === commentId);
@@ -120,23 +132,8 @@
                         console.log(e);
                     });
             },
-            updateActive(status) {
-                var data = {
-                    id: this.post.id,
-                    content: this.post.content,
-                    active: status
-                };
-                http.put("/posts/" + this.post.id, data)
-                    .then(response => {
-                        this.post.active = response.data.active;
-                        console.log(response.data);
-                    })
-                    .catch(e => {
-                        console.log(e);
-                    });
-            },
             deletePost() {
-                http.delete("/posts/" + this.post.id)
+                postService.deletePost(this.post.id)
                     .then(response => {
                         console.log(response.data);
                         this.$emit("refreshData");

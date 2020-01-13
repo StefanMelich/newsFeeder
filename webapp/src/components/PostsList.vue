@@ -9,7 +9,7 @@
                                          :key="index"
                                          class="hoverable">
                         <router-link :to="{ name: 'post-details',
-                                            params: { post: post, id: post.id }}"
+                                            params: { paramPost: post, id: post.id }}"
                                      >
                             {{ post.content }}
                         </router-link>
@@ -29,7 +29,7 @@
 <script>
     import {mdbListGroup, mdbListGroupItem, mdbBadge} from 'mdbvue';
     import {mdbContainer, mdbRow, mdbCol} from 'mdbvue';
-    import http from "../http-common";
+    import postService from "../auth/services/post.service";
 
     export default {
         name: "PostsList",
@@ -50,19 +50,13 @@
         methods: {
             /* eslint-disable no-console */
             retrievePosts() {
-                http.get("/posts")
+                postService
+                    .getAllPosts()
                     .then(response => {
                         this.posts = response.data;
                         console.log(response.data);
-                    })
-                    .catch(e => {
-                        console.log(e);
-                    });
-            },
-            refreshList() {
-                this.retrievePosts();
-            },
-
+                    }).catch(e => console.log(e));
+            }
         },
         mounted() {
             this.retrievePosts();

@@ -1,6 +1,6 @@
 package com.example.feeder.application.controller;
 
-import com.example.feeder.aauth.exception.UserExistsException;
+import com.example.feeder.application.exception.UserExistsException;
 import com.example.feeder.domain.exception.NotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

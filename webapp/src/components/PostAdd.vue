@@ -26,7 +26,7 @@
 
 <script>
     import { mdbModal, mdbModalHeader, mdbModalTitle, mdbModalBody, mdbModalFooter, mdbBtn, mdbInput } from 'mdbvue';
-    import http from "../http-common";
+    import postService from "../auth/services/post.service";
 
     export default {
         name: "PostAdd",
@@ -67,15 +67,14 @@
             },
             addPost(content) {
                 let data = { content: content };
-                http.post("/posts", data)
+                postService
+                    .createPost(data)
                     .then(response => {
                         console.log(response.data);
-                        /* redirect after response from server */
+                        // redirect after response from server
                         this.$router.push({name: 'posts-list'});
                     })
-                    .catch(e => {
-                        console.log(e);
-                    });
+                    .catch(e => console.log(e));
             }
         },
         computed: {
